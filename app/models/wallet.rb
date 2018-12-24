@@ -12,6 +12,7 @@
 class Wallet < ApplicationRecord
   # FIXME: Add validations
   def transactions
-    
+    # TODO add logic to fetch transactions
+    []
   end
 end
