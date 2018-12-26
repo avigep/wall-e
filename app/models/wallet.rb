@@ -23,17 +23,17 @@ class Wallet < ApplicationRecord
     transactions = Rails.cache.fetch("transactions_#{address}", expires_in: 1.minute) do
       EtherscanService.fetch_transactions(address)
     end
-    format_response ? format_transaction(transactions) : transactions
+    format_response ? format_transactions(transactions) : transactions
   end
 
   private
 
-  def format_transaction(fetched_transactions)
-    fetched_transactions.map do |t|
+  def format_transactions(transactions)
+    transactions.map do |transaction|
       {
-        amount: t['value'],
-        type: t['from'] == address ? :outgoing : :incoming,
-        date: DateTime.strptime(t['timeStamp'],'%s')
+        type: transaction['from'] == address ? :outgoing : :incoming,
+        amount: transaction['value'],
+        date: Time.strptime(transaction['timeStamp'], '%s')
       }
     end
   end

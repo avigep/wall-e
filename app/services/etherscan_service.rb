@@ -1,7 +1,6 @@
 
 class EtherscanService
   def self.fetch_transactions(address)
-    # TODO: Add caching logic.
     # TODO: Clean up
     resp = JSON.parse(
       RestClient.get(
