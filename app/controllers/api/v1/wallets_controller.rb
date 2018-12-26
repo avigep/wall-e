@@ -3,6 +3,10 @@ module Api
     class Api::V1::WalletsController < ApplicationController
       before_action :set_wallet, only: [:show, :update, :destroy]
 
+      # TODO: Add params, include_raw, fetch_fresh
+      # TODO: Add serializer for transactions
+      # TODO: Pagination for wallets
+
       # GET /api/v1/wallets
       def index
         @wallets = Wallet.all

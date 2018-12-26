@@ -5,8 +5,7 @@ module Api
 
       # GET /api/v1/transactions
       def index
-        @transactions = @wallet.transactions
-
+        @transactions = @wallet.fetch_transactions(params[:format_response] == 'true')
         render json: @transactions
       end
 
