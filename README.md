@@ -1,24 +1,41 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Alt text](wall-e.jpg?raw=true "Wall-e")
 
-Things you may want to cover:
+This is Wall-e. Wall-e is an api service for fetching transaction history form [Etherscan API](https://etherscan.io/myapikey).
 
-* Ruby version
+<br>Currently available on : <br>https://secure-dawn-87605.herokuapp.com
 
-* System dependencies
+## Routes
 
-* Configuration
+```ruby
+                     Prefix Verb   URI Pattern                                       Controller#Action
+api_v1_screens_transactions GET    /api/v1/screens/transactions(.:format)            api/v1/screens#transactions
+ api_v1_wallet_transactions GET    /api/v1/wallets/:wallet_id/transactions(.:format) api/v1/transactions#index
+             api_v1_wallets GET    /api/v1/wallets(.:format)                         api/v1/wallets#index
+                            POST   /api/v1/wallets(.:format)                         api/v1/wallets#create
+              api_v1_wallet GET    /api/v1/wallets/:id(.:format)                     api/v1/wallets#show
+                            PATCH  /api/v1/wallets/:id(.:format)                     api/v1/wallets#update
+                            PUT    /api/v1/wallets/:id(.:format)                     api/v1/wallets#update
+                            DELETE /api/v1/wallets/:id(.:format)                     api/v1/wallets#destroy
+```
 
-* Database creation
+## Dependencies
 
-* Database initialization
+* Redis
+* Ethersacn API key [here](https://etherscan.io/myapikey)
 
-* How to run the test suite
+```
+export ETHERSCAN_KEY=<key here>
+export REDIS_URL=redis://localhost:6379/0
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Build Instructions
 
-* Deployment instructions
+You need `ruby` and `bundler` gem to install dependencies.
 
-* ...
+* setup your DB connection `config/database.yml`
+* setup your db
+  `bundle exec rake db:setup`
+* run the service
+  `bundle exec rails s`
