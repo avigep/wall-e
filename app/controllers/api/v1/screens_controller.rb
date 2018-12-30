@@ -1,6 +1,4 @@
 class Api::V1::ScreensController < ApplicationController
-  def home
-  end
 
   def transactions
     wallets = Wallet.find(params[:wallet_ids])
