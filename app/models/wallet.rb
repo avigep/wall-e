@@ -19,6 +19,10 @@ class Wallet < ApplicationRecord
             format: { with: ADDRSSS_FORMAT },
             on: [:create, :update]
 
+  validates :name,
+            presence: true
+            on: [:create, :update]
+
   def fetch_transactions(format_response = false)
     transactions = Rails.cache.fetch("transactions_#{address}", expires_in: 1.minute) do
       EtherscanService.fetch_transactions(address)

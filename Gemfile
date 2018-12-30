@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'annotate'
   gem 'factory_bot_rails'
+  gem 'fuubar'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rspec-rails'
@@ -44,9 +45,10 @@ group :development do
 end
 
 group :test do
+  gem 'database_cleaner'
+  gem 'rails-controller-testing'
   gem 'simplecov'
   gem 'simplecov-console'
-  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
