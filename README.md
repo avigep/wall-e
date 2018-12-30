@@ -8,6 +8,8 @@ This is Wall-E. <br>Wall-E is an api service for fetching transaction history fo
 
 ## Routes
 
+Postman API reference : https://documenter.getpostman.com/view/6265753/RznBMzh6
+
 ```ruby
                      Prefix Verb   URI Pattern                                       Controller#Action
 api_v1_screens_transactions GET    /api/v1/screens/transactions(.:format)            api/v1/screens#transactions
