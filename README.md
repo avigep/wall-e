@@ -42,18 +42,6 @@ You need `ruby` and `bundler` gem to install dependencies.
 * run the service
   `bundle exec rails s`
 
-## Tests
-
-Using Rspec for tests.
-`bundle exec rspec`
-
-<br>Current coverage status
-<br>
-```
-COVERAGE:  90.59% -- 77/85 lines in 9 files
-```
-<br> ![test coverage](coverage.png?raw=true "test coverage")
-
 
 ## Samples responses
 * /api/v1/screens/transactions
@@ -167,3 +155,15 @@ COVERAGE:  90.59% -- 77/85 lines in 9 files
 	}
 ]
 ```
+
+## Tests
+
+Using Rspec for tests.
+`bundle exec rspec`
+
+<br>Current coverage status
+<br>
+```
+COVERAGE:  90.59% -- 77/85 lines in 9 files
+```
+<br> ![test coverage](coverage.png)
