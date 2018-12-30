@@ -1,6 +1,6 @@
 module Api
   module V1
-    class Api::V1::WalletsController < ApplicationController
+    class WalletsController < ApplicationController
       before_action :set_wallet, only: [:show, :update, :destroy]
 
       # TODO: Add params, include_raw, fetch_fresh

@@ -20,7 +20,7 @@ class Wallet < ApplicationRecord
             on: [:create, :update]
 
   validates :name,
-            presence: true
+            presence: true,
             on: [:create, :update]
 
   def fetch_transactions(format_response = false)
