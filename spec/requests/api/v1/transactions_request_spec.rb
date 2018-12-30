@@ -8,7 +8,7 @@ RSpec.describe Api::V1::TransactionsController, type: :request do
       context 'when filter_response param is present' do
         before { get api_v1_wallet_transactions_path(wallet_id: wallet.id), params: {format_response: true} }
         it { expect(response).to have_http_status(200) }
-        it { expect(json.first.keys.map &:to_sym).to contain_exactly(:type, :amount, :date) }
+        it { expect(json.first.keys.map &:to_sym).to contain_exactly(:amount, :date, :timestamp, :type, :wallet_name) }
       end
       context 'when filter_response param is not present' do
         before { get api_v1_wallet_transactions_path(wallet_id: wallet.id) }

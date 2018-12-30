@@ -50,7 +50,7 @@ Using Rspec for tests.
 <br>Current coverage status
 <br>
 ```
-COVERAGE:  85.88% -- 73/85 lines in 9 files
+COVERAGE:  90.59% -- 77/85 lines in 9 files
 ```
 <br> ![test coverage](coverage.png?raw=true "test coverage")
 
