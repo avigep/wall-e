@@ -1,8 +1,8 @@
 # README
 
-![Alt text](wall-e.jpg?raw=true "Wall-e")
+![Wall-E](wall-e.jpg?raw=true "Wall-E")
 
-This is Wall-e. Wall-e is an api service for fetching transaction history form [Etherscan API](https://etherscan.io/myapikey).
+This is Wall-E. <br>Wall-E is an api service for fetching transaction history form [Etherscan API](https://etherscan.io/myapikey).
 
 <br>Currently available on : <br>https://secure-dawn-87605.herokuapp.com
 
@@ -39,3 +39,16 @@ You need `ruby` and `bundler` gem to install dependencies.
   `bundle exec rake db:setup`
 * run the service
   `bundle exec rails s`
+
+## Tests
+
+Using Rspec for tests.
+`bundle exec rspec`
+
+<br>Current coverage status
+<br>
+```
+COVERAGE:  85.88% -- 73/85 lines in 9 files
+```
+<br> ![test coverage](coverage.png?raw=true "test coverage")
+
