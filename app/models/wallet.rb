@@ -12,7 +12,7 @@
 class Wallet < ApplicationRecord
 
   ADDRSSS_FORMAT = /0x[0-9a-fA-F]+/
-  ADDRESS_ZERO = "0x#{'00'*20}".freeze
+  ADDRESS_ZERO = "0x#{'00' * 20}".freeze
 
   WEI_TO_ETH = 1_000_000_000_000_000_000
 
@@ -49,7 +49,7 @@ class Wallet < ApplicationRecord
   end
 
   def format_amount(amount)
-    BigDecimal.new(amount, 16) / BigDecimal.new(WEI_TO_ETH, 16)
+    BigDecimal(amount, 16) / BigDecimal(WEI_TO_ETH, 16)
   end
 
 end
